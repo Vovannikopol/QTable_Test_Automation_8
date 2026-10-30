@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+instance/
+.pytest_cache/
+artifacts/
+test-results/
+playwright-report/
+*.sqlite3
+*.db
+.DS_Store
+.idea/
+.vscode/

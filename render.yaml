@@ -1,0 +1,13 @@
+# Render Blueprint: deploy the API and frontend as one web service.
+# Database is on the service filesystem: add a persistent disk for durable production data.
+services:
+  - type: web
+    name: qtable-e2e-demo
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_PATH
+        value: /code/instance/qtable.sqlite3
+      - key: SEED_DEMO_WAITER
+        value: "0"
